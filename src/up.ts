@@ -34,7 +34,7 @@ export async function up(servicesFile: string) {
   createDockerCompose(services);
 
   const docker = new Docker();
-  //await docker.command('compose up');
+  await docker.command('compose up');
 }
 
 async function pullSource(service: SourceCodeService) {
@@ -57,7 +57,7 @@ async function pullSource(service: SourceCodeService) {
 function build(service: SourceCodeService) {
   const servicePath = join(SOURCE_DIR, service.name);
   const docker = new Docker(new Options(undefined, servicePath, true));
-  //return docker.command(`build -t ${service.name} .`)
+  return docker.command(`build -t ${service.name} .`)
 }
 
 function replaceEnv(str: string) {
