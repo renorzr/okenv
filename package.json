@@ -1,5 +1,9 @@
 {
   "name": "okenv",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Reno Ren",
+  "license": "MIT",
   "dependencies": {
     "@types/figlet": "^1.5.5",
     "@types/js-yaml": "^4.0.5",
